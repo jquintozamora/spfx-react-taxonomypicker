@@ -39,7 +39,7 @@ Version|Date|Comments
 
 A browser in local mode (localhost) will be opened.
 If you want to try on a real environment, open:
-- https://<your-domain>.sharepoint.com/_layouts/15/workbench.aspx
+- https://your-domain.sharepoint.com/_layouts/15/workbench.aspx
 
 ## Usage
 Go to src => webparts => taxonomyPickerSample => TaxonomyPickerSampleWebPart.ts and configure yout Term Set / Mock Data.
@@ -62,7 +62,7 @@ PropertyPaneTaxonomyPicker("Language", {
 })
 ```
 #### Real Data configuration by using termSetGuid configuration
-Access from https://<your-domain>.sharepoint.com/_layouts/15/workbench.aspx
+Access from https://your-domain.sharepoint.com/_layouts/15/workbench.aspx
 Configuration:
 ```js
 PropertyPaneTaxonomyPicker("Language", {
