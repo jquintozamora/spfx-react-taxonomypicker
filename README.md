@@ -37,12 +37,16 @@ Version|Date|Comments
 - `$ gulp trust-dev-cert`
 - `$ gulp serve `
 
+#### Local Mode
 A browser in local mode (localhost) will be opened.
+https://localhost:4321/temp/workbench.html
+
+#### SharePoint Mode
 If you want to try on a real environment, open:
-- https://your-domain.sharepoint.com/_layouts/15/workbench.aspx
+https://your-domain.sharepoint.com/_layouts/15/workbench.aspx
 
 ## Usage
-Go to src => webparts => taxonomyPickerSample => TaxonomyPickerSampleWebPart.ts and configure yout Term Set / Mock Data.
+Go to src/webparts/taxonomyPickerSample/TaxonomyPickerSampleWebPart.ts and configure the control.
 #### Mock Data configuration by using defaultOptions configuration
 Access from https://localhost:4321/temp/workbench.html
 Configuration:
@@ -78,28 +82,28 @@ PropertyPaneTaxonomyPicker("Language", {
 ```
 
 ## Features
-- Use React for using react-taxonomypicker control inside a custom property pane (it can be used in the webpart itself too).
-- Use TypeScript to create the custom property pane control containing the taxonomy picker control.
-- reacting to web part property changes
-- loading data for use in custom property pane controls asynchronously without blocking the web part
-- Retrieve Terms from a Term Set by Term Set GUID.
-- *Sync / Async modes*
-  - Sync mode is used for medium / small Term Sets and loads *asynchronously* all Terms and store them in React State and SessionStorage cache.
-  - Async mode is used for large Term Sets and it *doesn't load any data initially*, but it loads the Terms upon user input in batches of 10 items.
-  - Sync / Async mode configurable via *termSetCountMaxSwapToAsync* property
+- Use [React](https://facebook.github.io/react) for using [react-taxonomypicker](https://github.com/jquintozamora/react-taxonomypicker) control inside a custom property pane (it can be used in the webpart itself too).
+- Use [TypeScript](https://www.typescriptlang.org) to create the custom property pane control containing the taxonomy picker control.
+- **Reacting to web part property changes**
+- Loading data for use in **custom property pane controls asynchronously** without blocking the web part
+- **Retrieve Terms** from a Term Set by Term Set GUID.
+- **Sync / Async modes**
+  - Sync mode is used for medium / small Term Sets and loads **asynchronously** all Terms and store them in React State and SessionStorage cache.
+  - Async mode is used for large Term Sets and it **doesn't load any data initially**, but it loads the Terms upon user input in batches of 10 items.
+  - Sync / Async mode configurable via **termSetCountMaxSwapToAsync** property
     - The control will fetch the number of terms and decide which mode to use depends on termSetCountMaxSwapToAsync value.
-- It Uses and depends on *SP.Taxonomy.js* (the webpart uses a wrapper to load all the SP.*.js dependencies)
-- Use Promise (polyfill it if needed IE)
-- onPickerChange event handler exposed
+- It Uses and depends on **SP.Taxonomy.js** (the webpart uses a wrapper to load all the SP.*.js dependencies)
+- Use **Promise** (polyfill it if needed IE)
+- **onPickerChange** event handler exposed
 - [react-select](https://github.com/JedWatson/react-select) properties exposed (extends them)
-- defaultOptions array exposed to enable input mock data when no termSetGuid configured
-- for more configuration options see [react-taxonomypicker](https://www.npmjs.com/package/react-taxonomypicker)
+- defaultOptions array exposed to enable input **mock data** when no termSetGuid configured
+- More configuration options: [react-taxonomypicker](https://www.npmjs.com/package/react-taxonomypicker)
 
 ## Scenarios supported
-- SharePoint Web Part using Script Editor or Content Editor Web Part
+- SharePoint Web Part using **Script Editor** or **Content Editor Web Part**
   - Consume it from [ES6 project](https://github.com/jquintozamora/react-taxonomypicker-consume-es6)
   - Consume it from [TypeScript project](https://github.com/jquintozamora/react-taxonomypicker-consume-typescript)
-- SharePoint Framework Web Part (SPFx)
+- **SharePoint Framework Web Part (SPFx)**
 
 
 <img src="https://telemetry.sharepointpnp.com/sp-dev-fx-webparts/samples/spfx-react-taxonomypicker" />
