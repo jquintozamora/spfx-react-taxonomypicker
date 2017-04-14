@@ -4,7 +4,7 @@ import { ITaxonomyPickerLoaderState } from './ITaxonomyPickerLoaderState';
 import { SPComponentLoader } from '@microsoft/sp-loader';
 import { Utils } from "../../../utils/Utils";
 
-import { ServiceScope, Environment, EnvironmentType } from '@microsoft/sp-core-library';
+import { Environment, EnvironmentType } from '@microsoft/sp-core-library';
 
 import TaxonomyPicker, { ITaxonomyPickerProps } from "react-taxonomypicker";
 import "react-taxonomypicker/dist/React.TaxonomyPicker.css";
@@ -20,11 +20,11 @@ export default class TaxonomyPickerLoader extends React.Component<ITaxonomyPicke
   }
 
   public componentDidMount(): void {
-    // based on the type of environment, return the correct instance of the IUserProfileService interface
-    if (Environment.type === EnvironmentType.SharePoint || Environment.type === EnvironmentType.ClassicSharePoint) {
+    if (Environment.type === EnvironmentType.SharePoint
+      || Environment.type === EnvironmentType.ClassicSharePoint) {
       this._loadSPJSOMScripts();
     } else {
-      this.setState({ loadingScripts: false, errors: [...this.state.errors, "You are on localhost mode (EnvironmentType.Local), be sure you disable termSetGuid and enable defaultOptions configuration in PropertyPaneTaxonomyPicker."]  });
+      this.setState({ loadingScripts: false, errors: [...this.state.errors, "You are on localhost mode (EnvironmentType.Local), be sure you disable termSetGuid and enable defaultOptions configuration in PropertyPaneTaxonomyPicker."] });
     }
   }
 

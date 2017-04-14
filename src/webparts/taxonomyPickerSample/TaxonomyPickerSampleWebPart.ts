@@ -49,10 +49,9 @@ export default class TaxonomyPickerSampleWebPart extends BaseClientSideWebPart<I
                   key: "Language_Field",
                   name: "Language",
                   displayName: "Language",
-                  multi: true,
+                  multi: false,
                   // termSetGuid: "26ebf149-101a-4996-9df2-8179a537350d",
-                  // termSetName: "Language",
-                  termSetCountMaxSwapToAsync: 100,
+                  termSetCountMaxSwapToAsync: 10,
                   defaultOptions: [
                     { label: "English", value: "f50249b6-310d-43b6-aaa6-f0cb46d851bf" },
                     { label: "Spanish", value: "237ca323-1ed8-4199-a49b-a9f7ce4256bf" },
@@ -70,13 +69,12 @@ export default class TaxonomyPickerSampleWebPart extends BaseClientSideWebPart<I
   }
 
   private _updateTaxonomyPicker = (name, value) => {
-    console.log(name + ": ");
     console.log(value);
     if (value !== null && value !== undefined) {
       if (value.hasOwnProperty("length")) {
         this.properties.pickerValue = value.map((item) => item.label).join(", ");
       } else {
-        this.properties.pickerValue = value.toString();
+        this.properties.pickerValue = value.label.toString();
       }
       this.render();
     }
