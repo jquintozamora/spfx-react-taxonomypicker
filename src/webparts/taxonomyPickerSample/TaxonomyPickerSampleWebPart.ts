@@ -48,8 +48,8 @@ export default class TaxonomyPickerSampleWebPart extends BaseClientSideWebPart<I
                 PropertyPaneTaxonomyPicker("Language", {
                   key: "Language_Field",
                   name: "Language",
-                  displayName: "Language",
-                  multi: false,
+                  // displayName: "Language",
+                  multi: true,
                   // termSetGuid: "26ebf149-101a-4996-9df2-8179a537350d",
                   termSetCountMaxSwapToAsync: 10,
                   defaultOptions: [

@@ -1,6 +1,6 @@
 {
   "name": "react-taxonomypicker-spfx",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "private": true,
   "engines": {
     "node": ">=0.10.0"
@@ -17,7 +17,7 @@
     "@types/webpack-env": ">=1.12.1 <1.14.0",
     "react": "15.4.2",
     "react-dom": "15.4.2",
-    "react-taxonomypicker": "0.0.30"
+    "react-taxonomypicker": "0.0.32"
   },
   "devDependencies": {
     "@microsoft/sp-build-web": "~1.0.0",
