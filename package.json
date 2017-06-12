@@ -15,9 +15,9 @@
     "@types/react-addons-update": "0.14.14",
     "@types/react-dom": "0.14.18",
     "@types/webpack-env": ">=1.12.1 <1.14.0",
-    "react": "15.4.2",
-    "react-dom": "15.4.2",
-    "react-taxonomypicker": "0.0.32"
+    "react": "15.5.4",
+    "react-dom": "15.5.4",
+    "react-taxonomypicker": "0.0.33"
   },
   "devDependencies": {
     "@microsoft/sp-build-web": "~1.0.0",
